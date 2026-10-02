@@ -8,8 +8,8 @@ public class PuzzleTest {
 
     static class TestPuzzle extends Puzzle {
 
-        public TestPuzzle(int id, String question, String answer) {
-            super(id, question, answer);
+        public TestPuzzle(int id, String question, String answer, Difficulty difficulty) {
+            super(id, question, answer, difficulty);
         }
     }
 
@@ -19,11 +19,13 @@ public class PuzzleTest {
         Puzzle puzzle = new TestPuzzle(
                 1,
                 "Decode this message",
-                "HELLO"
+                "HELLO",
+                Difficulty.MEDIUM
         );
 
         assertEquals(1, puzzle.getId());
         assertEquals("Decode this message", puzzle.getQuestion());
         assertEquals("HELLO", puzzle.getAnswer());
+        assertEquals(Difficulty.MEDIUM, puzzle.getDifficulty());
     }
 }
