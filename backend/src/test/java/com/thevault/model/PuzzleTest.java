@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class PuzzleTest {
 
     static class TestPuzzle extends Puzzle {
@@ -27,5 +29,6 @@ public class PuzzleTest {
         assertEquals("Decode this message", puzzle.getQuestion());
         assertEquals("HELLO", puzzle.getAnswer());
         assertEquals(Difficulty.MEDIUM, puzzle.getDifficulty());
+        assertTrue(puzzle.isLocked());
     }
 }

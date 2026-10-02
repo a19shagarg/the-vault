@@ -5,11 +5,14 @@ private int id;
 private String question;
 private String answer;
 private Difficulty difficulty;
+private boolean locked;
+
 public Puzzle(int id,String question,String answer,Difficulty difficulty){
     this.id=id;
     this.question = question;
     this.answer = answer;
     this.difficulty = difficulty;
+    this.locked = true;
 }
 public int getId(){
     return id;
@@ -23,4 +26,8 @@ public String getAnswer(){
 public Difficulty getDifficulty(){
     return difficulty;
 }
+public boolean isLocked(){
+    return locked;
+}
+
 }
