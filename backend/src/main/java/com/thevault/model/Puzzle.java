@@ -1,6 +1,6 @@
 package com.thevault.model;
-
-public abstract class Puzzle {
+import com.thevault.interfaces.Solvable;
+public abstract class Puzzle implements Solvable{
 private int id;
 private String question;
 private String answer;

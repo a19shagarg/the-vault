@@ -10,10 +10,20 @@ public class PuzzleTest {
 
     static class TestPuzzle extends Puzzle {
 
-        public TestPuzzle(int id, String question, String answer, Difficulty difficulty) {
-            super(id, question, answer, difficulty);
-        }
+    public TestPuzzle(int id, String question, String answer, Difficulty difficulty) {
+        super(id, question, answer, difficulty);
     }
+
+    @Override
+    public boolean checkAnswer(String answer) {
+        return getAnswer().equalsIgnoreCase(answer);
+    }
+
+    @Override
+    public String getHint() {
+        return "Test hint";
+    }
+}
 
     @Test
     void shouldCreatePuzzleWithCorrectDetails() {
